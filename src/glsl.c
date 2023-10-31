@@ -28,7 +28,7 @@ char* get_file_content(const char* filename)
 	int size_in_bytes = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
 
-	char* content = (char*) malloc(size_in_bytes + 1 * sizeof(char));
+	char* content = (char*) malloc(size_in_bytes + sizeof(char));
 	int i = 0;
 	int ch;
 	while ((ch = fgetc(fp)) != EOF)
